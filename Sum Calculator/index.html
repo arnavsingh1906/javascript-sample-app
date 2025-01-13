@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input {
+      margin: 10px;
+      padding: 5px;
+      font-size: 1rem;
+      width: 100px;
+      text-align: center;
+    }
+    button {
+      padding: 5px 10px;
+      font-size: 1rem;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Basic Calculator</h1>
+  <input type="number" id="num1" placeholder="Number 1">
+  <input type="number" id="num2" placeholder="Number 2">
+  <button onclick="calculate()">Add</button>
+  <div class="result" id="result">Result: </div>
+
+  <script>
+    function calculate() {
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      const sum = num1 + num2;
+      document.getElementById('result').textContent = `Result: ${sum}`;
+    }
+  </script>
+</body>
+</html>
